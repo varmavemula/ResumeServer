@@ -1,0 +1,523 @@
+body{
+	margin:0px;
+	font-size: 30px;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+#main-header{
+	height: 65vh;
+	/* opacity:0.8; */
+	background-image: url("./background.jpg");	
+	background-size:fill;
+	background-position: bottom;
+	background-attachment: fixed;
+	background-position-y: -500px;
+	padding-top: 1.2rem;
+}
+
+/* horizontal list items */
+
+.horizontal-list{
+	list-style: none;
+	padding-left: 0px;
+	margin: 0;
+}
+.horizontal-list li{
+	display: inline-block;
+	margin: 0px 8px 8px 0px;
+	font-weight: 100;
+	font-size: 0.9rem;
+}
+#navigation-items li a{
+	color: white;
+	text-decoration: none;
+	transition: color 1s, border-bottom 4s;
+
+}
+#navigation-items li a:hover{
+	color: red;
+	border-bottom: 1px solid red;
+
+}
+
+.text-centre{
+	text-align:center;
+}
+
+
+
+/* social sections */
+.social li a{
+	padding: 10px;
+	border: 1px solid white;
+	color: black;
+	font-size: 1rem;
+	height: 20px;
+	border-radius: 50%;
+	text-decoration: none;
+
+	
+}
+
+.social li a:hover{
+	box-shadow: 0px 0px 8px 2px whitesmoke;
+	border-bottom: 0px;
+	color: white;
+	text-decoration: none;
+	transition: color 0.5s, border-bottom 4s;
+
+}
+.name-social-container{
+	margin-top: 100px;
+}
+#my-name{
+	font-size: 3rem;
+	letter-spacing: 0.1rem;
+	font-weight: 700;
+	color: white;
+	margin-bottom: 0.5rem;
+}
+
+/*about section*/
+
+#about{
+	height: auto;
+	width: 100%;
+	position: relative;
+}
+#profile{
+	height:12rem;
+	width:12rem;
+	margin: auto;
+	margin-top: -17vh;
+}
+
+#profile img{
+	height:100%;
+	width:100%;
+	border-radius: 50%;
+	border:3px solid white;
+	box-shadow: 0 0 4px 6px ghostwhite;
+
+}
+
+#about p{
+	padding: 10px;
+	margin: auto;
+	height: 100%;
+	width: 70%;
+	font-weight: 100;
+	font-size: 1.1rem;
+	line-height: 28px;
+	color: grey;
+	text-align: justify;
+	font-family: sans-serif;
+	
+}
+
+/*Section classes*/
+section{
+	width:100%;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 20px;
+/*	border:1px solid red;*/
+}
+
+section:nth-child(2n){
+	background-color: #9e9b9b29;
+}
+
+section:nth-child(2n+1){
+	background-color: rgb(3, 3, 3);
+}
+
+section:target{
+	background-color: cyan;
+}
+
+.section-heading{
+	font-weight: 400;
+	width:auto;
+	margin: 10px auto;
+	padding:20px 10px 10px;
+/*	border:1px solid black;*/
+
+}
+.section-heading span{
+	color:#2857a4;
+	font-size: 30px;
+	display: inline-block;
+	padding-top: 10px;
+	margin-right: 0.5rem;
+/*	border:1px solid red;*/
+
+}
+.mb75px{
+	margin-bottom: 40px;
+}
+
+
+
+/*Skills section styles*/
+
+.skills-display{
+/*	border:1px solid red;*/
+	width:70%;
+	margin-top: 4rem;
+	margin-bottom: 1.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	/* align-items: center; */
+	justify-content: space-around;
+
+}
+
+.skill-progress{
+	width: 12rem;
+	height:2rem;
+	background-color: lightgrey;
+	border-radius:1.2rem;
+	margin-bottom: 1rem;
+	display: flex;
+
+}
+
+.skill-progress>div{
+	border-radius: 20px 0px 0px 20px;
+}
+
+
+/* .skill-name{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: inherit;
+
+	align-items: center;
+
+} */
+.skill-name span{
+	color:white;
+	font-size: 0.7rem;
+	margin: 1.2rem;
+	
+	
+
+}
+
+
+/*Percentage*/
+.eighty-five-percent{
+	width: 85%;
+}
+
+.eighty-percent{
+	width: 80%;
+}
+
+.seventy-five-percent{
+	width:75%;
+}
+.seventy-percent{
+	width:70%;
+}
+
+.sixty-percent{
+	width: 60%;
+/*	margin-left: 20px;*/
+}
+
+
+/*Color class*/
+.mb-blue{
+	background-color: #2857a4;
+	height: inherit;
+}
+
+.mb-orange{
+	background-color: orange;
+	height: inherit;
+}
+
+.mb-red{
+	background-color: red;
+	height: inherit;
+}
+.mb-skyblue{
+	background-color: skyblue;
+	height: inherit;
+}
+
+.mb-green{
+	background-color: green;
+	height: inherit;
+}
+
+
+
+/*Experience Section*/
+.Timeline{
+	border:2px solid black;
+	background-color: rgb(255, 255, 255);
+	position: relative;
+	width:75%;
+}
+
+.Timeline-box{
+	position: relative;
+	min-height:150px;
+	width:40%;
+	border:2px solid black;
+	left: 5%;
+	margin:5px;
+	
+
+}
+ 
+
+
+.Timeline-box:nth-child(2n){
+	left:53%;
+}
+.Timeline-divider{
+	position: absolute;
+	border:2px dashed red;
+	width:0;
+	height:75%;
+	top:15%;
+	left: 50%;
+	padding: 0;
+}
+
+
+ 
+.Home-point{
+	position: absolute; 
+	font-size: 30px;
+	left: 48.5%;
+	color: rgb(4, 255, 0);
+	padding: 0;
+	z-index: 6;
+}
+
+.point1{
+	top:10%;
+}
+.point2{
+	top: 35%;
+}
+.point3{
+	top: 55%;
+}
+.point4{
+	top: 90%;
+}
+
+
+.Timeline-Traveller{
+	position: sticky;
+	font-size: 20px;
+	top: 10%;
+	transform: rotate(90deg);
+	z-index:5;
+}
+
+.Timeline-Traveller i{
+	color:blueviolet;
+	font-size: 25px;
+	right:-20%;
+	
+}
+
+@media screen and (max-width:600px){
+	.Timeline-divider{
+		left: 8%;
+	}
+	.Timeline-box{
+		left: 15% !important;
+		width: 80%;
+	}
+	.Home-point{
+		left: 4%;
+	}
+}
+
+
+/* Portfolio Section */
+
+#portfolio-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 50px;
+    margin-bottom: 2%;
+    justify-content: space-around;
+}
+
+.portfolio-image-container {
+    max-width: 300px;
+    overflow: hidden;
+    margin: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+.portfolio-image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-details {
+    /* display: none; */
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    color: transparent;
+    text-align: center;
+    padding: 10px;
+    /* background-color: white; */
+}
+
+.portfolio-image-container:hover {
+    box-shadow: 0 0 20px #74ADC8;
+}
+
+.portfolio-image-container:hover .portfolio-details {
+    background-color: #80808078;
+    /* display: block; */
+    color: white;
+}
+
+/* Contact Form */
+
+#contact {
+
+
+
+    background-color: #0abcf9;
+    background-image: linear-gradient(50deg, #2857a4 0%, #403066 74%);
+    /*background-image: linear-gradient(50deg,#2857a4 0%, #5378b1 74%);*/
+    /*background-image: linear-gradient(170deg,#2857a4 0%, #8496b2 74%);*/
+    /*background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);*/
+    /*background-image: linear-gradient(to right,#13226fe0, #5473a2e0, #434ba8e0);*/
+    /*background-color: #13386fe0;*/
+    color: white;
+    padding-bottom: 40px;
+}
+
+#contact h1,
+#contact h1 span {
+    color: white;
+}
+
+#contact-form {
+    margin-left: 20%;
+}
+
+#contact-container {
+    display: flex;
+}
+
+#my-details-container {
+    width: 35%;
+    margin-left: 6%;
+}
+
+#my-details-container h3 {
+    color: white;
+    font-weight: 550;
+    font-size: 1.2rem;
+}
+
+#contact-form-container {
+    width: 50%;
+}
+
+#my-details-container p {
+    color: #d9dcdd;
+    font-size: 0.9rem;
+}
+
+.my-details-info-container {
+    margin-bottom: 20px;
+    color: #d9dcdd;
+}
+
+.my-details-info-container span {
+    margin-left: 0.4rem;
+    font-size: 0.95rem;
+}
+
+.my-details-info-container i {
+    color: white;
+}
+
+.my-details-icon {
+    width: 1rem;
+    height: 1rem;
+    vertical-align: bottom;
+    margin-right: 0.5rem;
+}
+
+
+#contact-form input,
+textarea {
+    max-width: 90%;
+    margin: 15px;
+    padding: 4px 10px;
+    border: 0px solid transparent;
+    border-bottom: 2px solid white;
+    /*#2857a4*/
+    color: var(--contact-light-text-color);
+    background: transparent;
+    width: 90%;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+
+
+#contact-form button[type="submit"] {
+    background: transparent;
+    /*#1a1a1a;*/
+    font-size: 0.95rem;
+    border: 2px solid white;
+    margin-top: 5%;
+    margin-left: 35%;
+    border-radius: 2px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.046875em;
+    line-height: 1;
+    padding: 0.8em 0.8em 0.78em;
+    text-transform: uppercase;
+}
+
+#contact-form button:hover {
+    background: white;
+    color: #13386fe0;
+}
+
+#contact .social-icons li a i {
+
+    font-size: 1.2rem;
+    margin: 40px 10px 10px;
+    padding: 10px 14px 20px 10px;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
