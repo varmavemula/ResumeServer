@@ -1,10 +1,33 @@
 const http = require("http");
 const port = 3333;
 const fs = require("fs");
+const path = require('path');
 
 function requestHandler(req,res){
     console.log(req.url);
-    res.writeHead(200, {'content-type':'text/html'});
+    if(req.url.startsWith("/images/")){
+        const imgPath = path.join(__dirname,req.url);
+        fs.readFile(imgPath,function(err,data){
+            console.log("imageData: ",data);
+            console.log(imgPath);
+            let contentType = '';
+            if(req.url.endsWith(".png")){
+                contentType = 'image/png';
+            }
+            else if(req.url.endsWith(".JPG")){
+                contentType='image/JPG';
+            }
+            else{
+                contentType = 'image/jpg';
+            }
+            res.writeHead(200, {
+                "Content-Type": contentType
+            });
+            res.end(data);
+
+        });
+    }
+    res.writeHead(200, {'Content-Type':'text/html'});
 
     fs.readFile('./resume.html', function(err, htmldata){
         if(err){
@@ -15,12 +38,14 @@ function requestHandler(req,res){
         
     fs.readFile('./resume.css', function(err, cssdata){
         if(err){
-            console.log("error in css reading");
             res.end('<h1>OOPS! something went wrong in css file reading</h1>');
             return;
         }
 
-        const combinedContent = `
+        
+        // console.log(cssdata);
+        const combinedContent = 
+            `
                 <html>
                 <head>
                     <style>${cssdata}</style>
@@ -29,12 +54,14 @@ function requestHandler(req,res){
                     ${htmldata}
                 </body>
                 </html>
-                    `;
+            `;
 
         // Send combined content in the response
+        
         res.writeHead(200, { 'Content-Type': 'text/html' });
         res.end(combinedContent);
     });
+    
 
     });
     

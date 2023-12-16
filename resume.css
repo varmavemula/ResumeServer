@@ -8,7 +8,7 @@ body{
 #main-header{
 	height: 65vh;
 	/* opacity:0.8; */
-	background-image: url("./background.jpg");	
+	background-image: url("./images/background.jpg");	
 	background-size:fill;
 	background-position: bottom;
 	background-attachment: fixed;
